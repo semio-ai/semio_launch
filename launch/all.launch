@@ -1,0 +1,12 @@
+<launch>
+	<include file="$(find semio_launch)/launch/visualization.launch" />
+	<include file="$(find semio_launch)/launch/attention.launch" />
+	<include file="$(find semio_launch)/launch/deixis.launch" />
+
+	<arg name="show_cropped_image" default="false" />
+	<include file="$(find semio_launch)/launch/humanoid_server.launch">
+		<arg name="show_cropped_image" value="$(arg show_cropped_image )" />
+	</include>
+
+	<include file="$(find semio_launch)/launch/transforms.launch" />
+</launch>

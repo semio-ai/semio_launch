@@ -1,0 +1,8 @@
+<launch>
+	<node
+		pkg="semio_launch"
+		type="static_transform_publisher.sh"
+		name="world_to_sensor"
+		args="0 0 1.1 0 0.15 0 /world /sensor"
+	/>
+</launch>

@@ -8,6 +8,7 @@ import subprocess
 
 parser = argparse.ArgumentParser( description='Start semio components' )
 
+parser.add_argument( "--no-rm", action="store_true", help="save image" )
 parser.add_argument( "--nvidia", action="store_true", help="launch with support for nvidia cards; implies --display" )
 parser.add_argument( "--display", action="store_true", help="launch with display support" )
 parser.add_argument( "--usb", action="store_true", help="launch with USB support" )
@@ -21,7 +22,10 @@ parser.add_argument( "args", nargs=argparse.REMAINDER, help="args to pass" )
 
 args = parser.parse_args()
 
-cmd_list = [ 'docker', 'run', '-ti', '--rm' ]
+cmd_list = [ 'docker', 'run', '-ti' ]
+
+if not args.no_rm:
+	cmd_list.append( '--rm' )
 
 if args.nvidia:
 	cmd_list[0] = 'nvidia-docker'

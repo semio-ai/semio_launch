@@ -1,0 +1,11 @@
+<launch>
+	<arg name="show_cropped_image" default="false" />
+
+	<node
+		pkg="semio_humanoid_ros"
+		type="semio_humanoid_server_node"
+		name="semio_humanoid_server_node"
+		output="screen"
+		args="_humanoid_source_type:=fullbody _show_cropped_image:=$(arg show_cropped_image)"
+	/>
+</launch>

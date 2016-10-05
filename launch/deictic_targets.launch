@@ -1,0 +1,15 @@
+<launch>
+	<arg name="cols" default="13" />
+	<arg name="rows" default="7" />
+	<arg name="h_spacing" default="15" />
+	<arg name="v_spacing" default="15" />
+	<arg name="radius" default="2" />
+
+	<node
+		pkg="semio_deixis_ros"
+		type="example_deictic_targets_node"
+		name="example_deictic_targets_node"
+		output="screen"
+		args="~deictic_targets:=/semio_deixis_node/targets _humanoid_source_type:=none _humanoid_sink_type:=none _cols:=$(arg cols) _rows:=$(arg rows) _h_spacing:=$(arg h_spacing) _v_spacing:=$(arg v_spacing) _radius:=$(arg radius)"
+	/>
+</launch>

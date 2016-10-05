@@ -1,0 +1,9 @@
+<launch>
+	<node
+		pkg="semio_deixis_ros"
+		type="semio_deixis_node"
+		name="semio_deixis_node"
+		output="screen"
+		args="~humanoids:=/semio_humanoid_server_node/humanoids _humanoid_source_type:=ros"
+	/>
+</launch>

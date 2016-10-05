@@ -1,0 +1,4 @@
+<launch>
+	<include file="$(find semio_launch)/launch/deictic_targets.launch" />
+	<include file="$(find semio_launch)/launch/deictic_rec.launch" />
+</launch>

@@ -1,0 +1,9 @@
+<launch>
+	<node
+		pkg="semio_visualization_ros"
+		type="semio_visualization_server_node"
+		name="semio_visualization_server_node"
+		output="screen"
+		args="~humanoids:=/semio_humanoid_server_node/humanoids ~attention_targets:=/semio_attention_node/targets ~attention_recognition_result:=/semio_attention_node/result ~deictic_targets:=/semio_deixis_node/targets ~deictic_recognition_result:=/semio_deixis_node/result"
+	/>
+</launch>

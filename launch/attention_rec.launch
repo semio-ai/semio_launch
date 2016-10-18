@@ -4,6 +4,6 @@
 		type="semio_attention_node"
 		name="semio_attention_node"
 		output="screen"
-		args="~humanoids:=/semio_humanoid_server_node/humanoids _humanoid_source_type:=ros"
+		args="~humanoids:=/semio_humanoid_server_node/humanoids _humanoid_source/type:=ros"
 	/>
 </launch>

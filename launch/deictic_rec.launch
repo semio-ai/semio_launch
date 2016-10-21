@@ -4,6 +4,6 @@
 		type="semio_deixis_node"
 		name="semio_deixis_node"
 		output="screen"
-		args="~humanoids:=/semio_humanoid_server_node/humanoids _humanoid_source/type:=ros"
+		args="_humanoid_source/type:=ros ~humanoids:=/semio_humanoid_server_node/humanoids/smoothed"
 	/>
 </launch>

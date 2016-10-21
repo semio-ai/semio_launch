@@ -6,6 +6,6 @@
 		type="semio_humanoid_server_node"
 		name="semio_humanoid_server_node"
 		output="screen"
-		args="_humanoid_source_type:=fullbody _humanoid_source/fullbody/show_cropped_image:=$(arg show_cropped_image)"
+		args="_humanoid_source_type:=fullbody _humanoid_source/fullbody/show_cropped_image:=$(arg show_cropped_image) _humanoid_sink/filter/smoothing/add:=true"
 	/>
 </launch>
